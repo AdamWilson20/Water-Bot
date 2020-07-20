@@ -1,15 +1,16 @@
 import discord
 import asyncio
 import aiohttp
-import os 
 import random
 import datetime
-
+import os
+from dotenv import load_dotenv
 from discord.ext import commands
 from discord.ext.commands import Bot
 
-TOKEN = 'NzM0NTEyNjgxMzQ3NzExMDg2.XxSyZw.sBk4QAj6CybzP_9ZcsKbkaqHQT4'
+load_dotenv()
 
+TOKEN = os.getenv("TOKEN")
 client = commands.Bot(command_prefix = '.')
 
 
